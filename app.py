@@ -12,6 +12,7 @@ gzip_header = CaseInsensitiveDict({
 bkt = getBucket()
 
 app = sys.argv[1]
+isDev = sys.argv[2] == 'dev'
 job_config = None
 if app == 'colorpk':
     print('start colorpk...')
@@ -25,7 +26,7 @@ else:
 for oneFile in job_config['files']:
     filePath = path.normpath(path.join(job_config['src'], oneFile))
     print('sending %s...' % filePath)
-    result = bkt.put_object_from_file('%s/%s'%(colorpk2_config['dst'], oneFile), filePath, gzip_header)
+    result = bkt.put_object_from_file('%s/%s'%(colorpk2_config['dst'], oneFile), filePath, {} if isDev else gzip_header)
     if result.status == 200:
         print('success on %s' % oneFile)
     else:
