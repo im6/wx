@@ -9,6 +9,10 @@ gzip_header = CaseInsensitiveDict({
     "Cache-Control": "public, max-age=172800"
 })
 
+gzip_header_dev = CaseInsensitiveDict({
+    "Cache-Control": "public, max-age=1"
+})
+
 bkt = getBucket()
 
 app = sys.argv[1]
@@ -26,7 +30,7 @@ else:
 for oneFile in job_config['files']:
     filePath = path.normpath(path.join(job_config['src'], oneFile))
     print('sending %s...' % filePath)
-    result = bkt.put_object_from_file('%s/%s'%(colorpk2_config['dst'], oneFile), filePath, {} if isDev else gzip_header)
+    result = bkt.put_object_from_file('%s/%s'%(colorpk2_config['dst'], oneFile), filePath, gzip_header_dev if isDev else gzip_header)
     if result.status == 200:
         print('success on %s' % oneFile)
     else:
