@@ -6,7 +6,7 @@ from jobs import colorpk_config, colorpk2_config
 
 gzip_header = CaseInsensitiveDict({
     "Content-Encoding": "gzip",
-    "Cache-Control": "public, max-age=172800"
+    "Cache-Control": "public, max-age=1728000"
 })
 
 gzip_header_dev = CaseInsensitiveDict({
