@@ -1,9 +1,13 @@
 colorpk_config = {
-    "src": "/Users/ZJ/PycharmProjects/vp/dist/",
+    "src": "/Users/ZJ/WebstormProjects/vp/dist/public",
     "dst": "2",
     "files": [
-        'app.js',
-        'vendor.js'
+        'main.js',
+        'main.css',
+        'adminPanel.js',
+        'adminPanel.css',
+        'newColor.js',
+        'newColor.css',
     ],
 }
 
