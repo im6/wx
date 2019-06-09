@@ -1,4 +1,4 @@
-# ossmanager
+# OSS manager
 
 ## QuickStart
 
