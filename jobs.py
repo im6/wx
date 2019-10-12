@@ -1,5 +1,5 @@
 colorpk_config = {
-    "src": "/Users/ZJ/WebstormProjects/vp/dist/public",
+    "src": "/Users/guo/Documents/github/vp/dist/public",
     "dst": "2",
     "files": [
         'main.js',
@@ -12,7 +12,7 @@ colorpk_config = {
 }
 
 colorpk2_config = {
-    "src": "/Users/ZJ/PycharmProjects/vp2/static/",
+    "src": "/Users/guo/Documents/github/vp2/static/",
     "dst": "4",
     "files": [
         'bundle0.js',
