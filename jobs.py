@@ -3,7 +3,7 @@ colorpk_config = {
     "dst": "2",
     "files": [
         'main.js',
-        'main.css',
+        #'main.css',
         'adminPanel.js',
         'adminPanel.css',
         'newColor.js',
