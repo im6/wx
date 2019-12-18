@@ -2,12 +2,12 @@ colorpk_config = {
     "src": "/Users/guo/Documents/github/vp/dist/public",
     "dst": "2",
     "files": [
-        'main.js',
-        #'main.css',
         'adminPanel.js',
         'adminPanel.css',
         'newColor.js',
         'newColor.css',
+        'main.js',
+        #'main.css',
     ],
 }
 
