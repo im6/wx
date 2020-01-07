@@ -1,4 +1,4 @@
-# OSS manager
+# OSS manager (deprecated)
 
 ## QuickStart
 
