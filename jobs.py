@@ -7,7 +7,7 @@ colorpk_config = {
         'newColor.js',
         'newColor.css',
         'main.js',
-        #'main.css',
+        'main.css',
     ],
 }
 
