@@ -4,6 +4,7 @@
 
 ```sh
 source env/bin/activate
-CREDPATH=local/credentials.cnf python app.py colorpk prod # for colorpk v1
-CREDPATH=local/credentials.cnf python app.py colorpk2 prod # for colorpk v2
+CREDPATH=local/credentials.cnf python colorpk.py colorpk prod # for colorpk v1
+CREDPATH=local/credentials.cnf python colorpk.py colorpk2 prod # for colorpk v2
+CREDPATH=local/credentials.cnf python jsfun.py svelte.svg # for jsfun-icon
 ```

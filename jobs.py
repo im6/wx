@@ -29,9 +29,3 @@ colorpk2_config = {
         'bundle5.css',
     ],
 }
-
-jsfun_config = {
-    "src": "",
-    "dst": "",
-    "files": [],
-}
