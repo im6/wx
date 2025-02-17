@@ -21,7 +21,7 @@ DerivedData/
 *.xcworkspace/
 *.xcuserstate
 *.xcscmblueprint
-wx.xcodeproj/xcuserdata/
+cwx.xcodeproj/xcuserdata/
 
 # ================================
 # Swift Package Manager
