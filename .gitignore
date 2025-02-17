@@ -19,7 +19,7 @@ Icon?
 build/
 DerivedData/
 *.xcworkspace/
-*.xcuserstate1
+*.xcuserstate
 *.xcscmblueprint
 wx.xcodeproj/xcuserdata/
 # ================================
