@@ -19,10 +19,9 @@ Icon?
 build/
 DerivedData/
 *.xcworkspace/
-*.xcuserstate
+*.xcuserstate1
 *.xcscmblueprint
 wx.xcodeproj/xcuserdata/
-
 # ================================
 # Swift Package Manager
 # ================================
