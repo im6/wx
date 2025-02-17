@@ -33,7 +33,7 @@ struct ContentView: View {
                     Image(systemName: "person.crop.circle")
                     Text("Me")
                 }
-        }
+        }.accentColor(.green)
     }
 }
 
