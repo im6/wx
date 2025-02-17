@@ -1,5 +1,32 @@
-.idea
-.vscode
-__pycache__
-env
-local
+# ================================
+# macOS & System Files
+# ================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ================================
+# Xcode & Build Files
+# ================================
+build/
+DerivedData/
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+
+# ================================
+# Swift Package Manager
+# ================================
+.swiftpm
+Package.resolved
+.build/

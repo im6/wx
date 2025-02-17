@@ -9,13 +9,68 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            ChatsView()
+                .tabItem {
+                    Image(systemName: "message.fill")
+                    Text("Chats")
+                }
+
+            Contacts()
+                .tabItem {
+                    Image(systemName: "person.2.fill")
+                    Text("Contacts")
+                }
+
+            DiscoverView()
+                .tabItem {
+                    Image(systemName: "safari.fill")
+                    Text("Discover")
+                }
+
+            MeView()
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("Me")
+                }
         }
-        .padding()
+    }
+}
+
+// Placeholder Views
+struct ChatsView: View {
+    var body: some View {
+        NavigationView {
+            Text("Chats View")
+                .navigationTitle("Chats")
+        }
+    }
+}
+
+struct ContactsView: View {
+    var body: some View {
+        NavigationView {
+            Text("Contacts View")
+                .navigationTitle("Contacts")
+        }
+    }
+}
+
+struct DiscoverView: View {
+    var body: some View {
+        NavigationView {
+            Text("Discover View")
+                .navigationTitle("Discover")
+        }
+    }
+}
+
+struct MeView: View {
+    var body: some View {
+        NavigationView {
+            Text("Me View")
+                .navigationTitle("Me")
+        }
     }
 }
 
