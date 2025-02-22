@@ -69,9 +69,7 @@ struct ContactRow: View {
     }
 }
 
-// Preview
-struct Contacts_Previews: PreviewProvider {
-    static var previews: some View {
-        Contacts()
-    }
+
+#Preview {
+    Contacts()
 }

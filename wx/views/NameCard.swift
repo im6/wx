@@ -90,10 +90,7 @@ struct NameCard: View {
     }
 }
 
-struct NameCard_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            NameCard(name: "Trump", wechatId: "abc")
-        }
-    }
+#Preview {
+    NameCard(name: "Trump", wechatId: "abc")
 }
+
