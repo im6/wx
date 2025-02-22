@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  wx
-//
-//  Created by Zijian Guo on 2/16/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -12,7 +5,7 @@ struct ContentView: View {
         TabView {
             ChatsView()
                 .tabItem {
-                    Image(systemName: "message.fill")
+                    Image(systemName: "message")
                     Text("Chats")
                 }
 
@@ -24,13 +17,13 @@ struct ContentView: View {
 
             DiscoverView()
                 .tabItem {
-                    Image(systemName: "safari.fill")
+                    Image(systemName: "safari")
                     Text("Discover")
                 }
 
             MeView()
                 .tabItem {
-                    Image(systemName: "person.crop.circle")
+                    Image(systemName: "person")
                     Text("Me")
                 }
         }.accentColor(.green)
@@ -41,7 +34,7 @@ struct ContentView: View {
 struct ChatsView: View {
     var body: some View {
         NavigationView {
-            Text("Chats View")
+            Text("Chats View 1")
                 .navigationTitle("Chats")
         }
     }

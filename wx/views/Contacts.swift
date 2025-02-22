@@ -22,7 +22,7 @@ struct Contacts: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 // Search Bar
                 if #available(iOS 15.0, *) {
@@ -37,10 +37,15 @@ struct Contacts: View {
                 ForEach(filteredContacts.keys.sorted(), id: \.self) { key in
                     Section(header: Text(key)) {
                         ForEach(filteredContacts[key]!, id: \.self) { contact in
-                            ContactRow(name: contact)
+                            NavigationLink(value: contact) {
+                                ContactRow(name: contact)
+                            }
                         }
                     }
                 }
+            }
+            .navigationDestination(for: String.self) { contact in
+                NameCard(name: contact, wechatId: contact)
             }
             .navigationTitle("Contacts")
         }
