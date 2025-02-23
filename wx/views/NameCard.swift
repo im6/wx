@@ -55,13 +55,9 @@ struct NameCard: View {
                     HStack {
                         Spacer()
                         Button(action: {
-                            // Handle Messages action
+                            print("Button tapped!")
                         }) {
-                            HStack {
-                                Image(systemName: "message")
-                                Text("Messages")
-                            }
-                            .font(.system(size: 16))
+                            Label("Messages", systemImage: "message")
                             .foregroundColor(.primary)
                         }
                         Spacer()
@@ -71,13 +67,9 @@ struct NameCard: View {
                     HStack {
                         Spacer()
                         Button(action: {
-                            // Handle Voice or Video Call action
+                            print("Button tapped!")
                         }) {
-                            HStack {
-                                Image(systemName: "video")
-                                Text("Voice or Video Call")
-                            }
-                            .font(.system(size: 16))
+                            Label("Voice or Video Call", systemImage: "video")
                             .foregroundColor(.primary)
                         }
                         Spacer()
