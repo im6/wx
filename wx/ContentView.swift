@@ -32,10 +32,30 @@ struct ContentView: View {
 
 // Placeholder Views
 struct ChatsView: View {
+    @ObservedObject var viewModel = PostViewModel()
     var body: some View {
         NavigationView {
-            Text("Chats View 1")
-                .navigationTitle("Chats")
+            VStack {
+                if viewModel.isLoading {
+                    ProgressView("Loading...")  // 🔄 Show spinner when loading
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .padding()
+                } else {
+                    List(viewModel.postList, id: \.id) { post in
+                        VStack(alignment: .leading) {
+                            Text(post.title)
+                                .font(.headline)
+                            Text(post.body)
+                                .font(.subheadline)
+                        }
+                    }
+                }
+            }
+        }
+        .onAppear {
+            Task {
+                print("load here")
+            }
         }
     }
 }
