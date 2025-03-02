@@ -10,6 +10,10 @@ class PostViewModel: ObservableObject {
             await self.loadData()
         }
     }
+    
+    func removeOnePost (at offsets: IndexSet) {
+        postList.remove(atOffsets: offsets)
+    }
 
     func loadData() async {
         isLoading = true

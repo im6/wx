@@ -37,24 +37,27 @@ struct ChatsView: View {
         NavigationView {
             VStack {
                 if viewModel.isLoading {
-                    ProgressView("Loading...")  // 🔄 Show spinner when loading
+                    ProgressView("Loading...")
                         .progressViewStyle(CircularProgressViewStyle())
                         .padding()
                 } else {
-                    List(viewModel.postList, id: \.id) { post in
-                        VStack(alignment: .leading) {
-                            Text(post.title)
-                                .font(.headline)
-                            Text(post.body)
-                                .font(.subheadline)
+                    List {
+                        ForEach(viewModel.postList, id: \.id) { post in
+                            VStack(alignment: .leading) {
+                                Text(post.title)
+                                    .font(.headline)
+                                Text(post.body)
+                                    .font(.subheadline)
+                            }
                         }
+                        .onDelete(perform: viewModel.removeOnePost)
                     }
                 }
             }
         }
         .onAppear {
             Task {
-                print("load here")
+                print("on Appear")
             }
         }
     }
