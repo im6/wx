@@ -52,6 +52,9 @@ struct ChatsView: View {
                         }
                         .onDelete(perform: viewModel.removeOnePost)
                     }
+                    .refreshable {
+                        await viewModel.loadData()
+                    }
                 }
             }
         }
